@@ -1,14 +1,22 @@
-.container-fluid-list {
-  text-decoration: none !important;
-  color: red;
-  list-style: none;
-  display: inline;
-}
-.container-fluid-list li a {
-  color: rgb(15, 32, 129);
-  text-decoration: none;
-}
-
 .bg-color {
   background: rgb(82, 185, 253);
+  margin: 0;
+  padding: 15px;
+}
+.itemHover {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+  text-decoration: none;
+}
+.itemHover:hover {
+  border-radius: 4%;
+  color: white;
+  text-decoration: underline;
+}
+#navBarTop {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
