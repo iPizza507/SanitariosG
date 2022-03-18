@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import NavBar2 from "./Components/navegacion/NavBar2";
+import { Griferia } from "./Components/paginas/Griferia";
+import { Home } from "./Components/paginas/Home";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <NavBar2>
+          <Routes>
+            <Route path="/home" exact component={<Home />}></Route>
+            <Route path="/griferia" component={<Griferia />}></Route>
+            <Route path="/bombasDeAgua" component={<Griferia />}></Route>
+            <Route path="/sanitarios" component={<Griferia />}></Route>
+            <Route path="/piletas" component={<Griferia />}></Route>
+            <Route path="/tanques" component={<Griferia />}></Route>
+            <Route path="/termotanques" component={<Griferia />}></Route>
+          </Routes>
+        </NavBar2>
+      </BrowserRouter>
     </div>
   );
 }

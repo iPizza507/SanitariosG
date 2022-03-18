@@ -1,0 +1,14 @@
+.container-fluid-list {
+  text-decoration: none !important;
+  color: red;
+  list-style: none;
+  display: inline;
+}
+.container-fluid-list li a {
+  color: rgb(15, 32, 129);
+  text-decoration: none;
+}
+
+.bg-color {
+  background: rgb(82, 185, 253);
+}
