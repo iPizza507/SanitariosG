@@ -1,9 +1,31 @@
 import React from "react";
-
 export default function Home() {
   return (
-    <div>
+    <>
       <h1>bienvenido a Home</h1>
-    </div>
+      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <img src="/public/img/alabama.jpg" className="d-block w-auto m-auto" alt="..." height="900">
+                    </div>
+                    <div className="carousel-item">
+                        <img src="" className="d-block  w-auto m-auto" alt="..." height="900">
+                    </div>
+                    <div className="carousel-item">
+                        <img src="" className="d-block w-auto m-auto" alt="..." height="900">
+                    </div>
+                </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                </button>
+            </div>
+    </>
   );
 }
