@@ -1,5 +1,5 @@
 import React from "react";
 
-export const BombasDeAgua = () => {
+export default function BombasDeAgua() {
   return <div>BombasDeAgua</div>;
-};
+}
