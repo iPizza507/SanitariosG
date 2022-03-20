@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar2 from "./Components/navegacion/NavBar2";
+
 import Home from "./Components/paginas/Home";
 import Griferia from "./Components/paginas/Griferia";
 import BombasDeAgua from "./Components/paginas/BombasDeAgua";

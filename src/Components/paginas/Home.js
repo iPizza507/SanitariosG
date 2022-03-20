@@ -1,31 +1,40 @@
-import React from "react";
+import { React } from "react";
+
+import Imagenes from "../../assets/Imagenes";
+
 export default function Home() {
   return (
     <>
       <h1>bienvenido a Home</h1>
-      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src="/public/img/alabama.jpg" className="d-block w-auto m-auto" alt="..." height="900">
-                    </div>
-                    <div className="carousel-item">
-                        <img src="" className="d-block  w-auto m-auto" alt="..." height="900">
-                    </div>
-                    <div className="carousel-item">
-                        <img src="" className="d-block w-auto m-auto" alt="..." height="900">
-                    </div>
-                </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </div>
+      <div
+        id="carouselExampleSlidesOnly"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img
+              src={Imagenes.Arizona}
+              className="d-block w-100"
+              alt="No se encuentra la imagen deseada"
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src={Imagenes.Alabama}
+              className="d-block w-100"
+              alt="No se encuentra la imagen deseada 2"
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src={Imagenes.ArizonaPlus}
+              className="d-block w-100"
+              alt="No se encuentra la imagen deseada 3"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
