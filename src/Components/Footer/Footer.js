@@ -1,75 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./footer.css";
 
 export const Footer = () => {
   return (
     <>
-      <footer className="text-center footer-style">
+      <footer className="footer">
         <div className="container">
           <div className="row">
-            <div className="col-md-4 footer-col">
-              <h3>Dirección</h3>
-              <p>
-                CABA - Argentina <br />
-                carrasco 400
-              </p>
+            <div className="col">
+              <div className="card-body text-center">
+                <h3 className="card-title">CONTÁCTANOS</h3>
+                <p className="card-text">
+                  Av. Álvarez Thomas 501, C1427 CCF, Buenos Aires
+                </p>
+                <p className="card-text">Tel: +54 1145534806</p>
+                <p className="card-text">Mail: sanitariosgiardina@yahoo.com</p>
+              </div>
             </div>
-            <div className="col-md-4 footer-col">
-              <h3>Mis redes</h3>
-              <ul className="list-inline">
-                <li>
-                  <Link
-                    target="_blank"
-                    href="#"
-                    className="btn-social btn-outline"
-                  >
-                    <i className="fa fa-fw fa-facebook"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    target="_blank"
-                    href="#"
-                    className="btn-social btn-outline"
-                  >
-                    <i className="fa fa-fw fa-google-plus"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    target="_blank"
-                    href="#"
-                    className="btn-social btn-outline"
-                  >
-                    <i className="fa fa-fw fa-twitter"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    target="_blank"
-                    href="#"
-                    className="btn-social btn-outline"
-                  >
-                    <i className="fa fa-fw fa-linkedin"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    target="_blank"
-                    href="#"
-                    className="btn-social btn-outline"
-                  >
-                    <i className="fa fa-fw fa-dribbble"></i>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-4 footer-col">
-              <h3>Trabajo FreeLancer</h3>
-              <p>
-                Tengo más de X años de experiencia en maquetación web y me
-                apasiona lo que hago!
-              </p>
+            <div className="col">
+              <div className="card-body text-center">
+                <h3 className="card-title">HORARIOS DE ATENCIÓN</h3>
+                <p className="card-text">Lunes a viernes</p>
+                <p className="card-text">De 8 a.m. - 12:30 a.m.</p>
+                <p className="card-text">De 14 p.m. - 18:30 p.m.</p>
+                <p className="card-text">Sábados y Domingos cerrado</p>
+              </div>
             </div>
           </div>
         </div>

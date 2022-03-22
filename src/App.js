@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar2 from "./Components/navegacion/NavBar2";
+import Footer from "./Components/Footer/Footer";
 
 import Home from "./Components/paginas/Home";
 import Griferia from "./Components/paginas/Griferia";
@@ -16,7 +17,8 @@ function App() {
       <Router>
         <NavBar2></NavBar2>
         <Routes>
-          <Route path="/home" element={<Home />}></Route>
+          <Route path="/" exact element={<Home />}></Route>
+          <Route path="/home" exact element={<Home />}></Route>
           <Route path="/griferia" element={<Griferia />}></Route>
           <Route path="/bombasDeAgua" element={<BombasDeAgua />}></Route>
           <Route path="/sanitarios" element={<Sanitarios />}></Route>
@@ -25,6 +27,7 @@ function App() {
           <Route path="/termotanques" element={<Termotanques />}></Route>
         </Routes>
       </Router>
+      <Footer></Footer>
     </>
   );
 }
