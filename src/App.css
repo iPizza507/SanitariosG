@@ -2,3 +2,6 @@ body {
   margin: 0;
   background-image: src("./assets/images/flowerDark.png");
 }
+.card {
+  width: 18rem;
+}
