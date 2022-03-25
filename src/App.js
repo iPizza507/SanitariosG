@@ -10,6 +10,8 @@ import Sanitarios from "./Components/paginas/Sanitarios";
 import Piletas from "./Components/paginas/Piletas";
 import Tanques from "./Components/paginas/Tanques";
 import Termotanques from "./Components/paginas/Termotanques";
+import Register from "./Components/paginas/Register";
+import LogIn from "./Components/paginas/LogIn";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="/piletas" element={<Piletas />}></Route>
           <Route path="/tanques" element={<Tanques />}></Route>
           <Route path="/termotanques" element={<Termotanques />}></Route>
+          <Route path="/ingresar" element={<LogIn />}></Route>
+          <Route path="/registrarse" element={<Register />}></Route>
         </Routes>
       </Router>
       <Footer></Footer>

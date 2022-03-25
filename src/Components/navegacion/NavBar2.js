@@ -58,7 +58,7 @@ export const NavBar2 = () => {
             </ul>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 m-auto ">
               <li className="nav-item">
-                <Link className="itemHover" to="/iniciar">
+                <Link className="itemHover" to="/ingresar">
                   Logueate
                 </Link>
               </li>

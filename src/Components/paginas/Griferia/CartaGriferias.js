@@ -2,7 +2,7 @@ import React from "react";
 import "../../../App.css";
 import ImagenesGriferias from "../../../assets/ImagenesGriferias";
 
-export default function Griferia() {
+export default function CartaGriferias() {
   return (
     <>
       {ImagenesGriferias.map((e) => (
@@ -18,12 +18,14 @@ export default function Griferia() {
             />
             <div className="card-body">
               <h5 className="card-title">{e.nombre}</h5>
-              <p className="card-text">{e.precio}</p>
+              <p className="card-text">{"$" + e.precio}</p>
 
               <a
                 href="/src/Components/paginas/Griferia.js"
                 className="btn btn-primary"
-                onClick={() => alert("comprando")}
+                onClick={() =>
+                  alert("comprando la griferia con el id: " + e.id)
+                }
               >
                 comprar
               </a>

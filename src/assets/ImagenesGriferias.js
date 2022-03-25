@@ -91,18 +91,6 @@ const Imagenes = [
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 10000,
   },
-  {
-    url: require(`../assets/images/gredos.jpg`),
-    nombre: "Greddos",
-    textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
-    precio: 10000,
-  },
-  {
-    url: require(`../assets/images/gredos.jpg`),
-    nombre: "Greddos MAMA",
-    textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
-    precio: 100000000,
-  },
 ];
 
 export default Imagenes;
