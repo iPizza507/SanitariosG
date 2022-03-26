@@ -1,5 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 export default function Register() {
+  const [email, setEmail] = useState("");
+
+  function handleChange(e) {
+    setEmail(e.target.value);
+    console.log(setEmail);
+  }
   return (
     <div className="container">
       <form>
@@ -12,6 +18,7 @@ export default function Register() {
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            onChange={handleChange}
           />
           <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.

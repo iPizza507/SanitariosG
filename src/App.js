@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NavBar2 from "./Components/navegacion/NavBar2";
 import Footer from "./Components/Footer/Footer";
+import CarritoDeCompra from "./Components/Carrito/CarritoDeCompra";
 
 import Home from "./Components/paginas/Home";
 import Griferia from "./Components/paginas/Griferia";
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
       <Router>
-        <NavBar2></NavBar2>
+        <NavBar2 />
         <Routes>
           <Route path="/" exact element={<Home />}></Route>
           <Route path="/home" exact element={<Home />}></Route>
@@ -31,7 +32,8 @@ function App() {
           <Route path="/registrarse" element={<Register />}></Route>
         </Routes>
       </Router>
-      <Footer></Footer>
+      <CarritoDeCompra />
+      <Footer />
     </>
   );
 }
