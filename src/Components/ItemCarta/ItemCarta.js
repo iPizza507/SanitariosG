@@ -1,11 +1,20 @@
-import React from "react";
-import CarritoDeCompra from "../Carrito/CarritoDeCompra";
+import React, { useState } from "react";
+//import CarritoDeCompra from "../Carrito/CarritoDeCompra";
 
 export default function ItemCarta(props) {
+  //destructuring de las props
   const { datos } = props;
+  //useState para crear la lista del carrito
+  const [sendData, setsendData] = useState([]);
 
   const sendInfo = (info) => {
-    return <CarritoDeCompra data={info}></CarritoDeCompra>;
+    let x = sendData.push(info);
+    const newsendData = {
+      ...sendData,
+      x,
+    };
+    setsendData(sendData);
+    console.log(newsendData);
   };
 
   return (
