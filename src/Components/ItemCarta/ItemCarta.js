@@ -1,8 +1,13 @@
 import React from "react";
+import CarritoDeCompra from "../Carrito/CarritoDeCompra";
 
 export default function ItemCarta(props) {
   const { datos } = props;
-  console.log(props);
+
+  const sendInfo = (info) => {
+    return <CarritoDeCompra data={info}></CarritoDeCompra>;
+  };
+
   return (
     <div className="col m-2">
       <div className="card">
@@ -17,16 +22,13 @@ export default function ItemCarta(props) {
         <div className="card-body">
           <h5 className="card-title">{datos.nombre}</h5>
           <p className="card-text">{"$" + datos.precio}</p>
-
-          <a
-            href="/src/Components/paginas/Griferia.js"
+          <button
+            type="button"
             className="btn btn-primary"
-            onClick={() =>
-              alert("comprando la griferia con el id: " + datos.id)
-            }
+            onClick={() => sendInfo(datos)}
           >
-            comprar
-          </a>
+            Añadir al Carrito
+          </button>
         </div>
       </div>
     </div>

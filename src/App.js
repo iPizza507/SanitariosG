@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+//header y footer
 import NavBar2 from "./Components/navegacion/NavBar2";
 import Footer from "./Components/Footer/Footer";
-import CarritoDeCompra from "./Components/Carrito/CarritoDeCompra";
 
+//pages
 import Home from "./Components/paginas/Home";
 import Griferia from "./Components/paginas/Griferia";
 import BombasDeAgua from "./Components/paginas/BombasDeAgua";
@@ -32,7 +33,6 @@ function App() {
           <Route path="/registrarse" element={<Register />}></Route>
         </Routes>
       </Router>
-      <CarritoDeCompra />
       <Footer />
     </>
   );

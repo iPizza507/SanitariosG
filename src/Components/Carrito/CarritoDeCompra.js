@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function CarritoDeCompra() {
+export default function CarritoDeCompra(props) {
+  const [first, setfirst] = useState(0);
+
   return (
     <div className="container text-center">
-      Aca va a estar el carrito de compra:
+      <div className="mb-3" key={"id"}>
+        <p>{first ? first : ""}</p>
+        <p>dasd</p>
+        <p>Aca va el precio</p>
+      </div>
     </div>
   );
 }
