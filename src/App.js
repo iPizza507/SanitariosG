@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //header y footer
 import NavBar2 from "./Components/navegacion/NavBar2";
@@ -14,15 +14,16 @@ import Tanques from "./Components/paginas/Tanques";
 import Termotanques from "./Components/paginas/Termotanques";
 import Register from "./Components/paginas/Register";
 import LogIn from "./Components/paginas/LogIn";
+import CarritoDeCompra from "./Components/Carrito/CarritoDeCompra";
 
 function App() {
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <NavBar2 />
         <Routes>
-          <Route path="/" exact element={<Home />}></Route>
-          <Route path="/home" exact element={<Home />}></Route>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
           <Route path="/griferia" element={<Griferia />}></Route>
           <Route path="/bombasDeAgua" element={<BombasDeAgua />}></Route>
           <Route path="/sanitarios" element={<Sanitarios />}></Route>
@@ -32,7 +33,12 @@ function App() {
           <Route path="/ingresar" element={<LogIn />}></Route>
           <Route path="/registrarse" element={<Register />}></Route>
         </Routes>
-      </Router>
+      </BrowserRouter>
+
+      <div id="Lista">
+        <h1>Aca esta la Lista:</h1>
+        <CarritoDeCompra />
+      </div>
       <Footer />
     </>
   );
