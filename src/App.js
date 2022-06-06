@@ -36,7 +36,7 @@ function App() {
             <Route path="/ingresar" element={<LogIn />}></Route>
             <Route path="/registrarse" element={<Register />}></Route>
           </Routes>
-          <div id="ListaOfCar" className="col-2">
+          <div id="ListaOfCar" className="col-4">
             <CarritoDeCompra />
           </div>
         </div>

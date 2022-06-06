@@ -24,5 +24,12 @@ body {
 }
 
 .btn-icon-trash{
-  background-color: rgb(82, 185, 253);
+  color: rgb(82, 185, 253);
+}
+.itemListOfCar{
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+  padding: 3px;
+  margin: 3px;
 }

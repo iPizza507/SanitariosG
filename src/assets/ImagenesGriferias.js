@@ -34,7 +34,7 @@ const Imagenes = {
 */
 
 /* 
-const Imagenes = [
+const Imagenes2 = [
   {
     Alabama: {
       url: require(`../assets/images/alabama.jpg`),
@@ -54,42 +54,56 @@ const Imagenes = [
     nombre: "Alabama",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
+    cantidad: 0,
+    cantidadTotal: 0,
   },
   {
     url: require(`../assets/images/Arizona.jpg`),
     nombre: "Arizona",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 5000,
+    cantidad: 0,
+    cantidadTotal: 0,
   },
   {
     url: require(`../assets/images/ArizonaPlus.jpg`),
     nombre: "Arizona Plus",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 6500,
+    cantidad: 0,
+    cantidadTotal: 0,
   },
   {
     url: require(`../assets/images/aromo.jpg`),
     nombre: "Aromo",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
+    cantidad: 0,
+    cantidadTotal: 0,
   },
   {
     url: require(`../assets/images/Kansas.jpg`),
     nombre: "kansas",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 8000,
+    cantidad: 0,
+    cantidadTotal: 0,
   },
   {
     url: require(`../assets/images/Libby.jpg`),
     nombre: "Libby",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 5000,
+    cantidad: 0,
+    cantidadTotal: 0,
   },
   {
     url: require(`../assets/images/gredos.jpg`),
     nombre: "Greddos",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 10000,
+    cantidad: 0,
+    cantidadTotal: 0,
   },
 ];
 
