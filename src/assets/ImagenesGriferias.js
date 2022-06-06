@@ -32,7 +32,7 @@ const Imagenes = {
 /*
 AlabamaMedidas: require(`../assets/images/alabamaMedidas.jpg`),
    */
-const Imagenes = [
+const ImagenesGriferias = [
   {
     url: require(`../assets/images/alabama.jpg`),
     nombre: "Alabama",
@@ -91,4 +91,4 @@ const Imagenes = [
   },
 ];
 
-export default Imagenes;
+export default ImagenesGriferias;

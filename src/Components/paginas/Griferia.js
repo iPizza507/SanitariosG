@@ -1,5 +1,8 @@
+//dependency
 import React from "react";
+//Styles
 import "../../App.css";
+//Components
 import CartaGriferias from "./Griferia/CartaGriferias";
 
 export default function Griferia() {

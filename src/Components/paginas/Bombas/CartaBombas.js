@@ -2,16 +2,16 @@ import React from "react";
 //css styles
 import "../../../App.css";
 //componentes
-import ImagenesGriferias from "../../../assets/ImagenesGriferias";
-import ItemCarta from "./ItemCarta";
+import ImagenesBombas from "../../../assets/ImagenesBombas";
+import ItemCarta from "../Griferia/ItemCarta";
 
 //libreria
 import { v4 as uuid } from "uuid";
 
-export default function CartaGriferias() {
+export default function CartaBombas() {
   return (
     <>
-      {ImagenesGriferias.map((e) => (
+      {ImagenesBombas.map((e) => (
         <ItemCarta key={(e.id = uuid())} datos={e} />
       ))}
     </>

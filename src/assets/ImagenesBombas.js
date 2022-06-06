@@ -1,7 +1,7 @@
 const ImagenesBombas = [
   {
     url: require(`../assets/images/bomba1.jpg`),
-    nombre: "Alabama",
+    nombre: "bomba1",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -9,7 +9,7 @@ const ImagenesBombas = [
   },
   {
     url: require(`../assets/images/bomba2.jpg`),
-    nombre: "Alabama",
+    nombre: "bomba2",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -17,7 +17,7 @@ const ImagenesBombas = [
   },
   {
     url: require(`../assets/images/bomba3.jpg`),
-    nombre: "Alabama",
+    nombre: "bomba3",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -25,7 +25,7 @@ const ImagenesBombas = [
   },
   {
     url: require(`../assets/images/bomba4.jpg`),
-    nombre: "Alabama",
+    nombre: "bomba4",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -33,7 +33,7 @@ const ImagenesBombas = [
   },
   {
     url: require(`../assets/images/bomba5.jpg`),
-    nombre: "Alabama",
+    nombre: "bomba5",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -41,7 +41,7 @@ const ImagenesBombas = [
   },
   {
     url: require(`../assets/images/bomba6.jpg`),
-    nombre: "Alabama",
+    nombre: "bomba6",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -49,7 +49,7 @@ const ImagenesBombas = [
   },
   {
     url: require(`../assets/images/bomba7.jpg`),
-    nombre: "Alabama",
+    nombre: "bomba7",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -57,7 +57,7 @@ const ImagenesBombas = [
   },
   {
     url: require(`../assets/images/bomba8.jpg`),
-    nombre: "Alabama",
+    nombre: "bomba8",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -65,7 +65,31 @@ const ImagenesBombas = [
   },
   {
     url: require(`../assets/images/bomba9.jpg`),
-    nombre: "Alabama",
+    nombre: "bomba9",
+    textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
+    precio: 4000,
+    cantidad: 0,
+    cantidadTotal: 0,
+  },
+  {
+    url: require(`../assets/images/bomba10.jpg`),
+    nombre: "bomba10",
+    textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
+    precio: 4000,
+    cantidad: 0,
+    cantidadTotal: 0,
+  },
+  {
+    url: require(`../assets/images/bomba11.jpg`),
+    nombre: "bomba11",
+    textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
+    precio: 4000,
+    cantidad: 0,
+    cantidadTotal: 0,
+  },
+  {
+    url: require(`../assets/images/bomba12.jpg`),
+    nombre: "bomba12",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,

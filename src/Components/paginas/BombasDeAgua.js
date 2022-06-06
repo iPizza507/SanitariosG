@@ -1,9 +1,18 @@
+//dependency
 import React from "react";
+//Styles
+import "../../App.css";
+//Components
+import CartaBombas from "./Bombas/CartaBombas";
 
 export default function BombasDeAgua() {
   return (
-    <div>
-      <h1>BombasDeAgua</h1>
-    </div>
+    <>
+      <section id="Griferias" className="container">
+        <div className="col row m-4">
+          <CartaBombas></CartaBombas>
+        </div>
+      </section>
+    </>
   );
 }
