@@ -1,5 +1,7 @@
+//dependency
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+//Styles
+import "../src/App.css";
 //header y footer
 import NavBar2 from "./Components/navegacion/NavBar2";
 import Footer from "./Components/Footer/Footer";
@@ -21,24 +23,25 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar2 />
-        <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/griferia" element={<Griferia />}></Route>
-          <Route path="/bombasDeAgua" element={<BombasDeAgua />}></Route>
-          <Route path="/sanitarios" element={<Sanitarios />}></Route>
-          <Route path="/piletas" element={<Piletas />}></Route>
-          <Route path="/tanques" element={<Tanques />}></Route>
-          <Route path="/termotanques" element={<Termotanques />}></Route>
-          <Route path="/ingresar" element={<LogIn />}></Route>
-          <Route path="/registrarse" element={<Register />}></Route>
-        </Routes>
+        <div className="d-flex">
+          <Routes>
+            <Route exact path="/" element={<Home />}></Route>
+            <Route path="/home" element={<Home />}></Route>
+            <Route path="/griferia" element={<Griferia />}></Route>
+            <Route path="/bombasDeAgua" element={<BombasDeAgua />}></Route>
+            <Route path="/sanitarios" element={<Sanitarios />}></Route>
+            <Route path="/piletas" element={<Piletas />}></Route>
+            <Route path="/tanques" element={<Tanques />}></Route>
+            <Route path="/termotanques" element={<Termotanques />}></Route>
+            <Route path="/ingresar" element={<LogIn />}></Route>
+            <Route path="/registrarse" element={<Register />}></Route>
+          </Routes>
+          <div id="ListaOfCar" className="col-2">
+            <CarritoDeCompra />
+          </div>
+        </div>
       </BrowserRouter>
 
-      <div id="Lista">
-        <h1>Aca esta la Lista:</h1>
-        <CarritoDeCompra />
-      </div>
       <Footer />
     </>
   );

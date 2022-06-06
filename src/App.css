@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  background-image: src("./assets/images/flowerDark.png");
 }
 .card {
   width: 18rem;
@@ -24,8 +23,6 @@ body {
   text-decoration: underline;
 }
 
-#navBarTop {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.btn-icon-trash{
+  background-color: rgb(82, 185, 253);
 }

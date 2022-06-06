@@ -3,10 +3,26 @@ export default function ItemCarta(props) {
   const { datos } = props;
 
   const sendInfo = (info) => {
-    //guardar en localStorage para dsp mostrar
-    let itemForCard = JSON.stringify(info);
-    localStorage.setItem(`item${info.url}`, itemForCard);
-    console.log("correcto..");
+    //crear arr
+    const newArr = [];
+    //recorrer localStorage para guardar la info en el nuevo array
+    for (let i = 0; i < localStorage.length; i++) {
+      let clave = localStorage.key(i);
+      let itemGrif = JSON.parse(localStorage.getItem(clave));
+      newArr[i] = itemGrif;
+    }
+    //filtrar desde el nuevo array y ver si EXISTE
+    const arrExiste = newArr.filter((e) => e.url === info.url);
+    //Si existe tiene q mandar msj de error, si no existe lo guardo.
+    if (arrExiste.length === 0) {
+      console.log("No esta aca capo");
+      let itemForCard = JSON.stringify(info);
+      localStorage.setItem(`item${info.url}`, itemForCard);
+      console.log("añadido correctamente..");
+      window.location.reload();
+    } else {
+      alert("Error, Ya existe capo");
+    }
   };
 
   return (
@@ -14,8 +30,6 @@ export default function ItemCarta(props) {
       <div className="card">
         <img
           src={datos.url}
-          type="button"
-          className="btn btn"
           data-bs-toggle="modal"
           data-bs-target="#staticBackdropalabama"
           alt={datos.info}
