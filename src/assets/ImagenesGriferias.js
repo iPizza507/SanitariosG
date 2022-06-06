@@ -1,9 +1,5 @@
 /*
 const Imagenes = {
-  pileta: require(`../assets/images/pileta.jpg`),
-  pileta1: require(`../assets/images/pileta1.jpg`),
-  pileta2: require(`../assets/images/pileta2.jpg`),
-
   tabla1: require(`../assets/images/tabla1.jpg`),
   tabla2: require(`../assets/images/tabla2.jpg`),
   tabla3: require(`../assets/images/tabla3.jpg`),
@@ -33,18 +29,6 @@ const Imagenes = {
 };
 */
 
-/* 
-const Imagenes2 = [
-  {
-    Alabama: {
-      url: require(`../assets/images/alabama.jpg`),
-      info: "Imagen de Alabama",
-      textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
-    },
-  },
-];
-
-*/
 /*
 AlabamaMedidas: require(`../assets/images/alabamaMedidas.jpg`),
    */
