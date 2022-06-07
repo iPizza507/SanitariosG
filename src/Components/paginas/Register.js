@@ -29,6 +29,7 @@ export default function Register() {
         email: email,
         password: password,
       };
+      console.log(person);
       sessionStorage.setItem("token", email);
       history("/Home");
       return <IniciarSesion infoPersona={(email, password)}></IniciarSesion>;

@@ -43,23 +43,23 @@ export const NavBar2 = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="itemHover" to="/sanitarios">
-                  Sanitarios
-                </Link>
-              </li>
-              <li className="nav-item">
                 <Link className="itemHover" to="/piletas">
                   Piletas
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="itemHover" to="/tanques">
-                  Tanques de Agua
+                <Link className="itemHover" to="/termotanques">
+                  Termotanques
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="itemHover" to="/termotanques">
-                  Termotanques
+                <Link className="itemHover" to="/sanitarios">
+                  Sanitarios
+                </Link>
+              </li>{" "}
+              <li className="nav-item">
+                <Link className="itemHover" to="/tanques">
+                  Tanques de Agua
                 </Link>
               </li>
             </ul>

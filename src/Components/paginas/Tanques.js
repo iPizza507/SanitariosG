@@ -1,9 +1,14 @@
-import React from "react";
+//Components
+import CartaSanitarios from "./Sanitarios/CartaSanitarios";
 
 export default function Tanques() {
   return (
-    <div>
-      <h1>bienvenido a Tanques</h1>
-    </div>
+    <>
+      <section id="Piletas" className="container">
+        <div className="col row m-4">
+          <CartaSanitarios></CartaSanitarios>
+        </div>
+      </section>
+    </>
   );
 }

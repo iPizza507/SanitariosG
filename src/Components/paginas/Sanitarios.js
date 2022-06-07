@@ -1,7 +1,14 @@
-import React from "react";
+//Components
+import CartaSanitarios from "./Sanitarios/CartaSanitarios";
 
-const Sanitarios = () => {
-  return <div>Sanitarios</div>;
-};
-
-export default Sanitarios;
+export default function Sanitarios() {
+  return (
+    <>
+      <section id="Piletas" className="container">
+        <div className="col row m-4">
+          <CartaSanitarios></CartaSanitarios>
+        </div>
+      </section>
+    </>
+  );
+}
