@@ -1,4 +1,5 @@
-//dependency
+//Dependency
+import { Navigate } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //Styles
 import "./CSS/App.css";
@@ -19,11 +20,14 @@ import LogIn from "./Components/paginas/LogIn";
 import CarritoDeCompra from "./Components/Carrito/CarritoDeCompra";
 
 function App() {
+  let token = sessionStorage.getItem("token");
+  console.log(token);
   return (
     <>
       <BrowserRouter>
         <NavBar2 />
         <div className="d-flex">
+          {!token && <Navigate to="/Home" />}
           <Routes>
             <Route exact path="/home" element={<Home />}></Route>
             <Route path="/" element={<Home />}></Route>
