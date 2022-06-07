@@ -1,23 +1,23 @@
-const ImagenesPiletas = [
+const ImagenesBachas = [
   {
-    url: require(`../assets/images/pileta.jpg`),
-    nombre: "Pileta1",
+    url: require(`../assets/images/bacha1.jpg`),
+    nombre: "bacha1",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
     cantidadTotal: 0,
   },
   {
-    url: require(`../assets/images/pileta1.jpg`),
-    nombre: "Pileta2",
+    url: require(`../assets/images/bacha2.jpg`),
+    nombre: "bacha2",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
     cantidadTotal: 0,
   },
   {
-    url: require(`../assets/images/pileta2.jpg`),
-    nombre: "Pileta3",
+    url: require(`../assets/images/bacha3.jpg`),
+    nombre: "bacha3",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -25,4 +25,4 @@ const ImagenesPiletas = [
   },
 ];
 
-export default ImagenesPiletas;
+export default ImagenesBachas;

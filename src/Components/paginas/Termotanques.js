@@ -1,9 +1,17 @@
+//dependency
 import React from "react";
-
+//Styles
+import "../../App.css";
+//Components
+import CartaTermotanques from "./Termotanques/CartaTermotanques";
 export default function Termotanques() {
   return (
-    <div>
-      <h1>bienvenido a Termotanques</h1>
-    </div>
+    <>
+      <section id="Termotanques" className="container">
+        <div className="col row m-4">
+          <CartaTermotanques></CartaTermotanques>
+        </div>
+      </section>
+    </>
   );
 }
