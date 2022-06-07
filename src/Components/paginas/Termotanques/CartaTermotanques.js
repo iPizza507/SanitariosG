@@ -1,8 +1,6 @@
-import React from "react";
-//css styles
-import "../../../App.css";
 //componentes
 import ImagenesTermotanques from "../../../assets/ImagenesTermotanques";
+
 import ItemCarta from "../Griferia/ItemCarta";
 
 //libreria

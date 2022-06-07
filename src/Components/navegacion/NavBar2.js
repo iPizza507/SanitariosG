@@ -1,6 +1,5 @@
-import React from "react";
+//Dependency
 import { Link } from "react-router-dom";
-import "../../App.css";
 
 export const NavBar2 = () => {
   const moveCart = () => {

@@ -1,9 +1,6 @@
-//Dependency
-import React from "react";
-//css styles
-import "../../../App.css";
 //componentes
 import ImagenesPiletas from "../../../assets/ImagenesPiletas";
+
 import ItemCarta from "../Griferia/ItemCarta";
 
 //libreria

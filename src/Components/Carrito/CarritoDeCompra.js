@@ -1,7 +1,6 @@
 //dependency
 import { useEffect, useState } from "react";
-//Styles
-import "../../App.css";
+
 export default function CarritoDeCompra() {
   //
   const [estad, setestad] = useState([]);
@@ -103,9 +102,9 @@ export default function CarritoDeCompra() {
               </div>
             ))}
           </div>
-          <div>
+          <div className="container">
             <h6>
-              El precio total es: <strong>{total}</strong>
+              Total: <strong>{total}</strong>
             </h6>
           </div>
         </>

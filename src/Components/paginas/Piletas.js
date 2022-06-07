@@ -1,7 +1,6 @@
-//dependency
-import React from "react";
 //Components
 import CartaPiletas from "./Piletas/CartaPiletas";
+
 export default function Piletas() {
   return (
     <>

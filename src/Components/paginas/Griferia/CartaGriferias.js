@@ -1,8 +1,6 @@
-import React from "react";
-//css styles
-import "../../../App.css";
 //componentes
 import ImagenesGriferias from "../../../assets/ImagenesGriferias";
+
 import ItemCarta from "./ItemCarta";
 
 //libreria

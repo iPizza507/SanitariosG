@@ -1,9 +1,9 @@
-import { React } from "react";
+//
 import ImagenesFrontales from "../../assets/ImagenesFrontales";
 
 export default function Home() {
   return (
-    <>
+    <div className="col-12">
       <div
         id="carouselExampleSlidesOnly"
         className="carousel slide"
@@ -34,10 +34,10 @@ export default function Home() {
         </div>
       </div>
       <div className="container text-center">
-        <h1 className="mt-5">Griferia Giardina, la griferia de confianza.</h1>
-        <p>dajsndjkasjkddajsndjkasjkddajsndjkasjkddajsndjkas</p>
+        <h1 className="mt-5">Griferia Giardina, la doble G de confianza.</h1>
+        <p>Si no encontras ninguna griferia.. Te lo enviamos!!</p>
         <p>Griferia cerca de tu casa</p>
       </div>
-    </>
+    </div>
   );
 }
