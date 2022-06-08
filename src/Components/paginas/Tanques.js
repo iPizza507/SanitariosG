@@ -1,12 +1,13 @@
 //Components
-import CartaSanitarios from "./Sanitarios/CartaSanitarios";
+
+import CartaTanquesDeAgua from "./TanquesDeAgua/CartaTanquesDeAgua";
 
 export default function Tanques() {
   return (
     <>
-      <section id="Piletas" className="container">
+      <section id="Tanques" className="container">
         <div className="col row m-4">
-          <CartaSanitarios></CartaSanitarios>
+          <CartaTanquesDeAgua></CartaTanquesDeAgua>
         </div>
       </section>
     </>

@@ -4,7 +4,10 @@ body {
 .card {
   width: 18rem;
 }
-
+.btnAddToCar{
+  background-color: rgb(82, 185, 253);
+  color: white;
+}
 .bg-color {
   background: rgb(82, 185, 253);
   margin: 0;

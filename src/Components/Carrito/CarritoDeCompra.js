@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react";
 
 export default function CarritoDeCompra() {
-  //
+  //State´s
   const [estad, setestad] = useState([]);
   const [total, settotal] = useState(0);
   const newArr = [];
-
+  //useEffect
   useEffect(() => {
     let tot = 0;
     for (let i = 0; i < localStorage.length; i++) {
@@ -19,21 +19,22 @@ export default function CarritoDeCompra() {
     setestad(newArr);
   }, []);
 
+  //eliminar 1
   const eliminate = (x) => {
     localStorage.removeItem(`item${x.url}`);
-    alert("eliminado");
     window.location.reload();
   };
+  //eliminar todos
   const eliminateAll = () => {
     localStorage.clear();
-    alert("se eliminado Todo");
+    alert("Se eliminado Todo");
     window.location.reload();
   };
-
+  //añadir cantidad
   const addMore = (x) => {
     let nuevaCant = prompt("¿Cantidad?");
     if (x.precio < 0 || isNaN(nuevaCant)) {
-      alert("error, solo numeros por favor");
+      alert("Error! This has been added..");
     } else {
       x.cantidad = nuevaCant;
       x.cantidadTotal = x.precio * nuevaCant;
@@ -79,8 +80,8 @@ export default function CarritoDeCompra() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="20"
+                    height="20"
                     fill="currentColor"
                     className="bi bi-file-plus-fill"
                     viewBox="0 0 16 16"
@@ -95,8 +96,8 @@ export default function CarritoDeCompra() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="20"
+                    height="20"
                     fill="currentColor"
                     className="bi bi-trash-fill"
                     viewBox="0 0 16 16"
@@ -120,8 +121,8 @@ export default function CarritoDeCompra() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="20"
+                  height="20"
                   fill="currentColor"
                   className="bi bi-trash-fill"
                   viewBox="0 0 16 16"
