@@ -21,11 +21,10 @@ body {
   text-decoration: none;
 }
 .itemHover:hover {
-  border-radius: 4%;
+  border-radius: 10%;
   color: white;
   text-decoration: underline;
 }
-
 .btn-icon-trash{
   color: rgb(82, 185, 253);
 }

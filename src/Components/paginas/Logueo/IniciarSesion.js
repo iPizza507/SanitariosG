@@ -2,11 +2,12 @@
 import { Navigate } from "react-router-dom";
 
 export const IniciarSesion = () => {
-  let token = sessionStorage.getItem("token");
-  console.log(token);
+  let person = sessionStorage.getItem("newPerson");
+  //console.log(person);
+
   return (
     <>
-      {token && <Navigate to="/Home" />}
+      {person && <Navigate to="/Home" />}
       <div className="col container">
         <form className="formLogin">
           <div className="mb-3">

@@ -17,7 +17,7 @@ import Termotanques from "./Components/paginas/Termotanques";
 import Register from "./Components/paginas/Register";
 import LogIn from "./Components/paginas/LogIn";
 import CarritoDeCompra from "./Components/Carrito/CarritoDeCompra";
-
+import ResultOfList from "./Components/Buscador/ResultOfList";
 function App() {
   return (
     <>
@@ -38,6 +38,7 @@ function App() {
             <Route path="/termotanques" element={<Termotanques />}></Route>
             <Route path="/ingresar" element={<LogIn />}></Route>
             <Route path="/registrarse" element={<Register />}></Route>
+            <Route path="/resultados" element={<ResultOfList />}></Route>
           </Routes>
           <div id="ListaOfCar" className="col-3">
             <CarritoDeCompra />

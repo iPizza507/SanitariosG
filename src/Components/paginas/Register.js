@@ -1,10 +1,10 @@
 import { useNavigate, Navigate } from "react-router-dom";
-import IniciarSesion from "./Logueo/IniciarSesion";
 export default function Register() {
   //para redirigir
   const history = useNavigate();
   //obtener los datos de las sesion
-  let token = sessionStorage.getItem("token");
+  let token = sessionStorage.getItem("newPerson");
+
   const submitHandler = (e) => {
     e.preventDefault();
     const email = document.getElementById("exampleInputEmail1").value;
@@ -24,18 +24,17 @@ export default function Register() {
     } else if (password !== password2) {
       alert("Las contraseñas deben coincidir");
     } else {
-      alert("credenciales va");
+      console.log("credenciales va");
       let person = {
         email: email,
         password: password,
       };
-      console.log(person);
-      sessionStorage.setItem("token", email);
+      let newPerson = JSON.stringify(person);
+      sessionStorage.setItem("newPerson", newPerson);
       history("/Home");
-      return <IniciarSesion infoPersona={(email, password)}></IniciarSesion>;
     }
-    //
   };
+
   return (
     <>
       {token && <Navigate to="/Home" />}
