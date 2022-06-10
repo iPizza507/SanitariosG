@@ -19,7 +19,7 @@ export default function CarritoDeCompra() {
     setestad(newArr);
   }, []);
 
-  //eliminar 1
+  //eliminar un item
   const eliminate = (x) => {
     localStorage.removeItem(`item${x.url}`);
     window.location.reload();
@@ -27,7 +27,7 @@ export default function CarritoDeCompra() {
   //eliminar todos
   const eliminateAll = () => {
     localStorage.clear();
-    alert("Se eliminado Todo");
+    alert("Delete All");
     window.location.reload();
   };
   //añadir cantidad
@@ -38,11 +38,9 @@ export default function CarritoDeCompra() {
     } else {
       x.cantidad = nuevaCant;
       x.cantidadTotal = x.precio * nuevaCant;
-      console.log(x.cantidadTotal);
       localStorage.removeItem(`item${x.url}`);
       let itemForCard = JSON.stringify(x);
       localStorage.setItem(`item${x.url}`, itemForCard);
-      console.log("añadido correctamente..");
       window.location.reload();
     }
   };
@@ -108,7 +106,7 @@ export default function CarritoDeCompra() {
               </div>
             ))}
           </div>
-          <div className="container">
+          <div className="container d-flex justify-content-between align-items-center">
             <h6>
               Total: <strong>{total}</strong>
             </h6>

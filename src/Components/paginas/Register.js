@@ -40,7 +40,7 @@ export default function Register() {
     <>
       {token && <Navigate to="/Home" />}
       <div className="container">
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className="formRegister">
           <div className="mb-3 mt-3">
             <label className="form-label">Email address</label>
             <input
@@ -71,10 +71,10 @@ export default function Register() {
           </div>
           <button
             type="submit"
-            className="btn btn-primary"
+            className="btn btn-form-register"
             onClick={submitHandler}
           >
-            Submit
+            Register!
           </button>
         </form>
       </div>

@@ -2,8 +2,8 @@
 import { Link } from "react-router-dom";
 
 export const NavBar2 = () => {
+  const carDeployment = document.getElementById("ListaOfCar");
   const moveCart = () => {
-    let carDeployment = document.getElementById("ListaOfCar");
     if (carDeployment.style.display === "none") {
       carDeployment.style.display = "block";
     } else {
@@ -74,7 +74,7 @@ export const NavBar2 = () => {
                   Regístrate
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" id="cart">
                 <Link className="itemHover" to="#" onClick={moveCart}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

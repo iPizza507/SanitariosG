@@ -8,7 +8,7 @@ export const IniciarSesion = () => {
     <>
       {token && <Navigate to="/Home" />}
       <div className="col container">
-        <form>
+        <form className="formLogin">
           <div className="mb-3">
             <label className="form-label">Email address</label>
             <input
@@ -29,16 +29,8 @@ export const IniciarSesion = () => {
               id="exampleInputPassword"
             />
           </div>
-          <div className="mb-3 form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="exampleCheck1"
-            />
-            <label className="form-check-label">Check me out</label>
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
+          <button type="submit" className="btn btn-form-login">
+            Login
           </button>
         </form>
       </div>

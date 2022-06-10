@@ -15,6 +15,7 @@ const ImagenesGriferias = [
     precio: 5000,
     cantidad: 0,
     cantidadTotal: 0,
+    medidas: require(`../assets/images/alabamaMedidas.jpg`),
   },
   {
     url: require(`../assets/images/ArizonaPlus.jpg`),
@@ -23,6 +24,7 @@ const ImagenesGriferias = [
     precio: 6500,
     cantidad: 0,
     cantidadTotal: 0,
+    medidas: require(`../assets/images/alabamaMedidas.jpg`),
   },
   {
     url: require(`../assets/images/aromo.jpg`),
@@ -31,6 +33,7 @@ const ImagenesGriferias = [
     precio: 4000,
     cantidad: 0,
     cantidadTotal: 0,
+    medidas: require(`../assets/images/alabamaMedidas.jpg`),
   },
   {
     url: require(`../assets/images/Kansas.jpg`),
@@ -39,6 +42,7 @@ const ImagenesGriferias = [
     precio: 8000,
     cantidad: 0,
     cantidadTotal: 0,
+    medidas: require(`../assets/images/alabamaMedidas.jpg`),
   },
   {
     url: require(`../assets/images/Libby.jpg`),
@@ -47,6 +51,7 @@ const ImagenesGriferias = [
     precio: 5000,
     cantidad: 0,
     cantidadTotal: 0,
+    medidas: require(`../assets/images/alabamaMedidas.jpg`),
   },
   {
     url: require(`../assets/images/gredos.jpg`),
@@ -55,6 +60,7 @@ const ImagenesGriferias = [
     precio: 10000,
     cantidad: 0,
     cantidadTotal: 0,
+    medidas: require(`../assets/images/alabamaMedidas.jpg`),
   },
 ];
 
