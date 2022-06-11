@@ -49,6 +49,7 @@ body {
 }
 .cart-border{
   box-shadow: 0px 0px 5px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 .card-text-precio, .text-Error{
   color: rgb(82, 185, 253);

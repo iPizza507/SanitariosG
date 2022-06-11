@@ -34,6 +34,7 @@ export default function CarritoDeCompra() {
   const eliminateAll = () => {
     localStorage.clear();
     alert("Delete All");
+    history("/griferia");
     window.location.reload();
   };
   //añadir cantidad
@@ -52,18 +53,21 @@ export default function CarritoDeCompra() {
   };
   //comprar
   const buy = () => {
-    const person = sessionStorage.getItem("newPerson");
+    let person = sessionStorage.getItem("newPerson");
     console.log(person);
     if (person) {
       history("/buy");
+    } else {
+      alert("Please, register to buy..");
     }
   };
+
   return (
     <div className="cart-border">
       {total !== 0 ? (
         <>
           <div className="d-flex justify-content-between align-items-center">
-            <p>Nombre:</p>
+            <p>Producto:</p>
             <p>Precio por u.</p>
             <p>Precio por cant</p>
             <p>Agregar cant</p>
@@ -105,6 +109,7 @@ export default function CarritoDeCompra() {
                   type="button"
                   className="btn btn-icon-trash"
                   onClick={() => eliminate(e)}
+                  title="Clear item"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +155,7 @@ export default function CarritoDeCompra() {
         </>
       ) : (
         <div className="container d-flex justify-content-center">
-          <h1 className="text-Error">Ops! Error.. Not Found!</h1>
+          <h1 className="text-Error">Ops! Your cart is empty!</h1>
         </div>
       )}
     </div>
