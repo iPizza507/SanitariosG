@@ -115,7 +115,7 @@ export default function CarritoDeCompra() {
               Total: <strong>{total}</strong>
             </h6>
             <h6>
-              Eliminar todo:
+              Eliminar todo gustavo:
               <button
                 type="button"
                 className="btn btn-icon-trash"
