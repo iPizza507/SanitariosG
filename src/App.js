@@ -19,6 +19,7 @@ import LogIn from "./Components/paginas/LogIn";
 import CarritoDeCompra from "./Components/Carrito/CarritoDeCompra";
 import ResultOfList from "./Components/Buscador/ResultOfList";
 import Buy from "./Components/paginas/Buy";
+import Filtros from "./Components/Buscador/Filtros";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <BrowserRouter>
         <NavBar2 />
         <div className="d-flex">
+          <Filtros></Filtros>
           <Routes>
             <Route exact path="/home" element={<Home />}></Route>
             <Route path="/" element={<Home />}></Route>
@@ -40,6 +42,7 @@ function App() {
             <Route path="/resultados" element={<ResultOfList />}></Route>
             <Route path="/buy" element={<Buy />}></Route>
           </Routes>
+
           <div id="ListaOfCar" className="col-3">
             <CarritoDeCompra />
           </div>
