@@ -34,7 +34,7 @@ export default function Home() {
         </div>
       </div>
       <div className="container text-center">
-        <h1 className="mt-5">Griferia Giardina, la doble G de confianza.</h1>
+        <h1 className="m-5">Griferia Giardina, la doble G de confianza.</h1>
         <p>Si no encontras ninguna griferia.. Te lo enviamos!!</p>
         <p>Griferia cerca de tu casa</p>
       </div>

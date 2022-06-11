@@ -18,6 +18,7 @@ import Register from "./Components/paginas/Register";
 import LogIn from "./Components/paginas/LogIn";
 import CarritoDeCompra from "./Components/Carrito/CarritoDeCompra";
 import ResultOfList from "./Components/Buscador/ResultOfList";
+import Buy from "./Components/paginas/Buy";
 
 function App() {
   return (
@@ -25,9 +26,6 @@ function App() {
       <BrowserRouter>
         <NavBar2 />
         <div className="d-flex">
-          {
-            //!token && <Navigate to="/registrarse" />
-          }
           <Routes>
             <Route exact path="/home" element={<Home />}></Route>
             <Route path="/" element={<Home />}></Route>
@@ -40,6 +38,7 @@ function App() {
             <Route path="/ingresar" element={<LogIn />}></Route>
             <Route path="/registrarse" element={<Register />}></Route>
             <Route path="/resultados" element={<ResultOfList />}></Route>
+            <Route path="/buy" element={<Buy />}></Route>
           </Routes>
           <div id="ListaOfCar" className="col-3">
             <CarritoDeCompra />
