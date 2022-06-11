@@ -1,20 +1,67 @@
 //Components
+import ImagenesBombas from "../../assets/ImagenesBombas";
 import ImagenesGriferias from "../../assets/ImagenesGriferias";
+import ImagenesPiletas from "../../assets/ImagenesPiletas";
+import ImagenesSanitarios from "../../assets/ImagenesSanitarios";
 import ImagenesTanqueDeAgua from "../../assets/ImagenesTanqueDeAgua";
 import ImagenesTermotanques from "../../assets/ImagenesTermotanques";
+
 export default function ResultOfList() {
   let item = localStorage.getItem("search");
   let newItem = JSON.parse(item);
-  let newListItems = ImagenesGriferias.filter((e) => e.nombre === newItem);
+  //pasarlo a minusc
+  let newItem2 = newItem.toLowerCase();
+  //eliminar espacios en blanco
+  let newItem3 = newItem2.replace(/ /g, "");
 
-  let newArrList = [ImagenesTanqueDeAgua, ImagenesTermotanques];
-  newArrList.forEach((e, i) => console.log(e[i].url));
+  const newArrList = [
+    ImagenesBombas,
+    ImagenesGriferias,
+    ImagenesPiletas,
+    ImagenesSanitarios,
+    ImagenesTanqueDeAgua,
+    ImagenesTermotanques,
+  ];
+
+  const newAr = [];
+  let cont = 0;
+  newArrList.forEach((element) => {
+    for (let i = 0; i < element.length; i++) {
+      let n = element[i].nombre.toLowerCase();
+      if (n.includes(newItem3)) {
+        newAr[cont] = element[i];
+        cont++;
+      }
+    }
+  });
+  const sendInfo = (info) => {
+    //crear arr
+    const newArr = [];
+    //recorrer localStorage para guardar la info en el nuevo array
+    for (let i = 0; i < localStorage.length; i++) {
+      let clave = localStorage.key(i);
+      let itemGrif = JSON.parse(localStorage.getItem(clave));
+      newArr[i] = itemGrif;
+    }
+    //filtrar desde el nuevo array y ver si EXISTE
+    const arrExiste = newArr.filter((e) => e.url === info.url);
+    //Si existe tiene q mandar msj de error, si no existe lo guardo.
+    if (arrExiste.length === 0) {
+      console.log("No esta aca capo");
+      let itemForCard = JSON.stringify(info);
+      localStorage.setItem(`item${info.url}`, itemForCard);
+      console.log("añadido correctamente..");
+      window.location.reload();
+    } else {
+      alert("Error! Already exist");
+    }
+  };
   return (
     <>
       <section id="Griferias" className="container">
         <div className="col row m-4">
-          {newListItems ? (
-            newListItems.map((e) => {
+          {newAr.length > 0 ? (
+            newAr.map((e) => {
               return (
                 <div className="col m-2" key={e.url}>
                   <div className="card m-auto">
@@ -28,7 +75,11 @@ export default function ResultOfList() {
                       <h5 className="card-title">{e.nombre}</h5>
                       <p className="card-text">{"$" + e.precio}</p>
                       <div className="d-flex">
-                        <button type="button" className="btn btnAddToCar m-2">
+                        <button
+                          type="button"
+                          className="btn btnAddToCar m-2"
+                          onClick={() => sendInfo(e)}
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -65,7 +116,9 @@ export default function ResultOfList() {
               );
             })
           ) : (
-            <h1>Sorry, NOT FOUND</h1>
+            <div className="container d-flex justify-content-center">
+              <h1>Sorry, NOT FOUND</h1>
+            </div>
           )}
         </div>
       </section>

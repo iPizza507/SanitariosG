@@ -23,7 +23,11 @@ export const NavBar2 = () => {
   //buscar
   const search = (e) => {
     e.preventDefault();
-    const item = document.getElementById("search").value;
+    let item = document.getElementById("search").value;
+    //pasarlo a minusc
+    item.toLowerCase();
+    //eliminar espacios en blanco
+    item.replace();
     if (item.length === 0 || item === "") {
       alert("Error!");
     } else if (item.length < 3) {
@@ -35,11 +39,13 @@ export const NavBar2 = () => {
         let newItem = JSON.stringify(item);
         localStorage.setItem("search", newItem);
         history(`/resultados?keyword=${item}`);
+        window.location.reload();
       } else {
         //crear uno nuevo..
         let newItem = JSON.stringify(item);
         localStorage.setItem("search", newItem);
         history(`/resultados?keyword=${item}`);
+        window.location.reload();
       }
     }
   };

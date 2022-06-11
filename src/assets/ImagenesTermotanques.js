@@ -1,7 +1,7 @@
 const ImagenesTermotanques = [
   {
     url: require(`../assets/images/termotanque1.jpg`),
-    nombre: "termotanque1",
+    nombre: "Termotanque 1",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -9,7 +9,7 @@ const ImagenesTermotanques = [
   },
   {
     url: require(`../assets/images/termotanque2.jpg`),
-    nombre: "termotanque2",
+    nombre: "Termotanque 2",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -17,7 +17,7 @@ const ImagenesTermotanques = [
   },
   {
     url: require(`../assets/images/termotanque3.jpg`),
-    nombre: "termotanque3",
+    nombre: "Termotanque 3",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,
@@ -25,7 +25,7 @@ const ImagenesTermotanques = [
   },
   {
     url: require(`../assets/images/termotanque4.jpg`),
-    nombre: "Pileta3",
+    nombre: "Termotanque 4",
     textoInformativo: "es algo de nuestra labor elavoarr estas coasa",
     precio: 4000,
     cantidad: 0,

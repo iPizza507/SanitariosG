@@ -2,11 +2,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //Styles
 import "./CSS/App.css";
+
 //header y footer
 import NavBar2 from "./Components/navegacion/NavBar2";
 import Footer from "./Components/Footer/Footer";
-
-//pages
+//components
 import Home from "./Components/paginas/Home";
 import Griferia from "./Components/paginas/Griferia";
 import BombasDeAgua from "./Components/paginas/BombasDeAgua";
@@ -18,6 +18,7 @@ import Register from "./Components/paginas/Register";
 import LogIn from "./Components/paginas/LogIn";
 import CarritoDeCompra from "./Components/Carrito/CarritoDeCompra";
 import ResultOfList from "./Components/Buscador/ResultOfList";
+
 function App() {
   return (
     <>

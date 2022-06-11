@@ -9,11 +9,15 @@ export default function CarritoDeCompra() {
   //useEffect
   useEffect(() => {
     let tot = 0;
+    //buscamos en el array del localStorage y añadimos al nuevo array que va a mostrar los items
     for (let i = 0; i < localStorage.length; i++) {
       let clave = localStorage.key(i);
       let itemGrif = JSON.parse(localStorage.getItem(clave));
-      newArr[i] = itemGrif;
-      tot = tot + itemGrif.precio + itemGrif.cantidadTotal;
+      //mientras sea distinto de search, guardalo..
+      if (clave !== "search") {
+        newArr[i] = itemGrif;
+        tot = tot + itemGrif.precio + itemGrif.cantidadTotal;
+      }
     }
     settotal(tot);
     setestad(newArr);
@@ -59,7 +63,7 @@ export default function CarritoDeCompra() {
             {estad.map((e) => (
               <div
                 className="d-flex justify-content-between align-items-center itemListOfCar"
-                key={e.id}
+                key={e.url}
               >
                 <h5 className="card-title m-0 p-1">{e.nombre}</h5>
                 <p className="card-text m-0">$/u ${e.precio}</p>
