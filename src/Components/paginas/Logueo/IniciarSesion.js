@@ -7,7 +7,7 @@ export const IniciarSesion = () => {
 
   return (
     <>
-      {person && <Navigate to="/Home" />}
+      {person && <Navigate to="/" />}
       <div className="col container">
         <form className="formLogin">
           <div className="mb-3">

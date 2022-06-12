@@ -1,91 +1,76 @@
+//Dependency
+import { useNavigate } from "react-router-dom";
 //Components
-import ImagenesBombas from "../../assets/ImagenesBombas";
-import ImagenesGriferias from "../../assets/ImagenesGriferias";
-import ImagenesPiletas from "../../assets/ImagenesPiletas";
-import ImagenesSanitarios from "../../assets/ImagenesSanitarios";
-import ImagenesTanqueDeAgua from "../../assets/ImagenesTanqueDeAgua";
-import ImagenesTermotanques from "../../assets/ImagenesTermotanques";
+import ResultOfList from "./ResultOfList";
 
 export default function Filtros() {
-  let newItem = "Hola";
-  //pasarlo a minusc
-  let newItem2 = newItem.toLowerCase();
-  //eliminar espacios en blanco
-  let newItem3 = newItem2.replace(/ /g, "");
+  const history = useNavigate();
 
-  const newArrList = [
-    ImagenesBombas,
-    ImagenesGriferias,
-    ImagenesPiletas,
-    ImagenesSanitarios,
-    ImagenesTanqueDeAgua,
-    ImagenesTermotanques,
-  ];
+  const sendFiltros = () => {
+    let marca = document.getElementById("marca");
+    let tipo = document.getElementById("tipo");
+    let valores = [marca.value.toLowerCase(), tipo.value.toLowerCase()];
 
-  const newAr = [];
-  let cont = 0;
-  newArrList.forEach((element) => {
-    for (let i = 0; i < element.length; i++) {
-      let n = element[i].nombre.toLowerCase();
-      if (n.includes(newItem3)) {
-        newAr[cont] = element[i];
-        cont++;
+    for (let i = 0; i < valores.length; i++) {
+      if (localStorage.key("valores")) {
+        //si existe, removerlo y crear uno nuevo..
+        localStorage.removeItem("valores");
+        let newItem = JSON.stringify(valores);
+        localStorage.setItem("valores", newItem);
+        history(`/resultados?keyword=${valores[0]}?keyword=${valores[1]}`);
+        window.location.reload();
+      } else {
+        //crear uno nuevo..
+        let newItem = JSON.stringify(valores);
+        localStorage.setItem("valores", newItem);
+        history(`/resultados?keyword=${valores[0]}?keyword=${valores[1]}`);
+        window.location.reload();
       }
     }
-  });
-
-  const sendInfo = (info) => {
-    console.log(info);
-    /**
-    //crear arr
-    const newArr = [];
-    //recorrer localStorage para guardar la info en el nuevo array
-    for (let i = 0; i < localStorage.length; i++) {
-      let clave = localStorage.key(i);
-      let itemGrif = JSON.parse(localStorage.getItem(clave));
-      newArr[i] = itemGrif;
-    }
-    //filtrar desde el nuevo array y ver si EXISTE
-    const arrExiste = newArr.filter((e) => e.url === info.url);
-    //Si existe tiene q mandar msj de error, si no existe lo guardo.
-    if (arrExiste.length === 0) {
-      console.log("No esta aca capo");
-      let itemForCard = JSON.stringify(info);
-      localStorage.setItem(`item${info.url}`, itemForCard);
-      console.log("añadido correctamente..");
-      window.location.reload();
-    } else {
-      alert("Error! Already exist");
-    } */
+    history("/resultados");
+    return <ResultOfList valores={valores}></ResultOfList>;
   };
+
   return (
     <>
-      <div className="col-2">
+      <div className="col-2 m-2">
         <h1>Filtros</h1>
-        <form>
+        <form action="/resultados">
           <div className="form-group col-md-4">
             <label>Marca</label>
-            <select id="inputState1" className="form-control">
-              <option selected value="Roca">
-                Roca
+            <select id="marca" className="form-control">
+              <option value="" disabled selected>
+                Seleccione una Marca...
               </option>
               <option value="Bari">Bari</option>
               <option value="Deca">Deca</option>
               <option value="Ferrum">Ferrum</option>
+              <option value="Jhonson">Jhonson</option>
+              <option value="Roca">Roca</option>
+              <option value="Rowa">Rowa</option>
+              <option value="Pluvius">Pluvius</option>
+              <option value="Daewoo">Daewoo</option>
+              <option value="Rotoplas">Rotoplas</option>
+              <option value="Affinity">Affinity</option>
             </select>
           </div>
           <div className="form-group col-md-4">
             <label>Tipo</label>
-            <select id="inputState2" className="form-control">
-              <option selected value="Bidet">
-                Bidet
+            <select id="tipo" className="form-control">
+              <option value="" disabled selected>
+                Seleccione un Tipo...
               </option>
-              <option value="Lavamanos">Lavamanos</option>
+              <option value="Bidet">Bidet</option>
+              <option value="Lavatorio">Lavatorio</option>
               <option value="Inodorio">Inodorio</option>
+              <option value="Depósito">Depósito</option>
+              <option value="Bañera">Bañera</option>
             </select>
           </div>
-          <div>
-            <label>Precio</label>
+
+          {/*
+              <div>
+                <label>Precio</label>
             <fieldset className="form-group">
               <div className="row">
                 <div className="col-sm-10">
@@ -96,7 +81,6 @@ export default function Filtros() {
                       name="gridRadios"
                       id="gridRadios1"
                       value="option1"
-                      checked
                     />
                     <label className="form-check-label">Hasta $5000</label>
                   </div>
@@ -106,8 +90,7 @@ export default function Filtros() {
                       type="radio"
                       name="gridRadios"
                       id="gridRadios2"
-                      value="option1"
-                      checked
+                      value="option2"
                     />
                     <label className="form-check-label">$5000 - $15000</label>
                   </div>
@@ -117,22 +100,34 @@ export default function Filtros() {
                       type="radio"
                       name="gridRadios"
                       id="gridRadios3"
-                      value="option1"
-                      checked
+                      value="option3"
                     />
                     <label className="form-check-label">$15000 - All..</label>
                   </div>
                 </div>
               </div>
-            </fieldset>
-          </div>
+            </fieldset></div>
+              */}
+
           <div>
-            <input
-              className="btn btn-primary"
+            <button
+              className="btn text-title-buy p-1 mt-2"
               type="submit"
               value="Submit"
-              onClick={sendInfo()}
-            />
+              onClick={sendFiltros}
+            >
+              Search
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-search mx-2"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg>
+            </button>
           </div>
         </form>
       </div>

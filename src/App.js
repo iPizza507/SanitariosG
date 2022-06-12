@@ -1,5 +1,7 @@
 //Dependency
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 //Styles
 import "./CSS/App.css";
 
@@ -22,15 +24,24 @@ import Buy from "./Components/paginas/Buy";
 import Filtros from "./Components/Buscador/Filtros";
 
 function App() {
+  const [show, setShow] = useState(true);
+  let url = window.location.href;
+  useEffect(() => {
+    const URLS = ["home", "ingresar", "registrarse"];
+    let a = URLS.filter((e) => url.includes(e));
+    if (a === "") {
+      setShow(false);
+    }
+  }, [url]);
   return (
     <>
       <BrowserRouter>
         <NavBar2 />
         <div className="d-flex">
-          <Filtros></Filtros>
+          {show === true ? <Filtros></Filtros> : <>No</>}
+
           <Routes>
-            <Route exact path="/home" element={<Home />}></Route>
-            <Route path="/" element={<Home />}></Route>
+            <Route exact path="/" element={<Home />}></Route>
             <Route path="/griferia" element={<Griferia />}></Route>
             <Route path="/bombasDeAgua" element={<BombasDeAgua />}></Route>
             <Route path="/sanitarios" element={<Sanitarios />}></Route>

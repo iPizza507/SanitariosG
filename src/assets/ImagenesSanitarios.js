@@ -33,7 +33,7 @@ const ImagenesSanitarios = [
   },
   {
     url: require(`../assets/images/Baniera1.jpg`),
-    nombre: "Baniera Ferrum",
+    nombre: "Bañera Ferrum",
     textoInformativo: "Bañera Acrilica Atuel Blanco 150X70X40 cm",
     precio: 63290,
     cantidad: 0,

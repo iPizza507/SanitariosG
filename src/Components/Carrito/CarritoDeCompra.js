@@ -16,7 +16,7 @@ export default function CarritoDeCompra() {
       let clave = localStorage.key(i);
       let itemGrif = JSON.parse(localStorage.getItem(clave));
       //mientras sea distinto de search, guardalo..
-      if (clave !== "search") {
+      if (clave !== "search" && clave !== "valores") {
         newArr[i] = itemGrif;
         tot = tot + itemGrif.precio + itemGrif.cantidadTotal;
       }

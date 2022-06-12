@@ -58,7 +58,7 @@ export const NavBar2 = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center m-auto">
               <li className="nav-item">
-                <Link className="itemHover" to="/home">
+                <Link className="itemHover" to="/">
                   Home
                 </Link>
               </li>

@@ -31,13 +31,13 @@ export default function Register() {
       };
       let newPerson = JSON.stringify(person);
       sessionStorage.setItem("newPerson", newPerson);
-      history("/Home");
+      history("/");
     }
   };
 
   return (
     <>
-      {token && <Navigate to="/Home" />}
+      {token && <Navigate to="/" />}
       <div className="container">
         <form onSubmit={submitHandler} className="formRegister">
           <div className="mb-3 mt-3">

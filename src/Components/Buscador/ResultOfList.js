@@ -7,13 +7,7 @@ import ImagenesTanqueDeAgua from "../../assets/ImagenesTanqueDeAgua";
 import ImagenesTermotanques from "../../assets/ImagenesTermotanques";
 
 export default function ResultOfList() {
-  let item = localStorage.getItem("search");
-  let newItem = JSON.parse(item);
-  //pasarlo a minusc
-  let newItem2 = newItem.toLowerCase();
-  //eliminar espacios en blanco
-  let newItem3 = newItem2.replace(/ /g, "");
-
+  //Array con el contenido-------------------------------------
   const newArrList = [
     ImagenesBombas,
     ImagenesGriferias,
@@ -22,18 +16,58 @@ export default function ResultOfList() {
     ImagenesTanqueDeAgua,
     ImagenesTermotanques,
   ];
-
   const newAr = [];
-  let cont = 0;
-  newArrList.forEach((element) => {
-    for (let i = 0; i < element.length; i++) {
-      let n = element[i].nombre.toLowerCase();
-      if (n.includes(newItem3)) {
-        newAr[cont] = element[i];
-        cont++;
+  //Buscar por el buscador-------------------------------------
+  let item = localStorage.getItem("search");
+  let newItem = JSON.parse(item);
+
+  //Buscar filtros-------------------------------------
+  let itemB = localStorage.getItem("valores");
+  let filterValue = JSON.parse(itemB);
+  //-------------------------------------preguntar por donde entra la info-------------------------------------
+  if (item !== null) {
+    localStorage.removeItem("valores");
+    //pasarlo a minusc
+    let newItem2 = newItem.toLowerCase();
+    //eliminar espacios en blanco
+    let newItem3 = newItem2.replace(/ /g, "");
+    let cont = 0;
+    newArrList.forEach((element) => {
+      for (let i = 0; i < element.length; i++) {
+        let n = element[i].nombre.toLowerCase();
+        if (n.includes(newItem3)) {
+          newAr[cont] = element[i];
+          cont++;
+        }
       }
-    }
-  });
+    });
+  } else if (itemB !== null) {
+    localStorage.removeItem("search");
+    let cont = 0;
+    newArrList.forEach((element) => {
+      for (let i = 0; i < element.length; i++) {
+        let n = element[i].nombre.toLowerCase();
+        if (filterValue[0] !== null && filterValue[1] !== null) {
+          if (n.includes(`${filterValue[1]} ${filterValue[0]}`)) {
+            newAr[cont] = element[i];
+            cont++;
+          }
+        } else if (filterValue[0] !== null) {
+          if (n.includes(filterValue[0])) {
+            newAr[cont] = element[i];
+            cont++;
+          }
+        } else if (filterValue[1] !== null) {
+          if (n.includes(filterValue[1])) {
+            newAr[cont] = element[i];
+            cont++;
+          }
+        }
+      }
+    });
+  }
+
+  //Enviar al carrito-------------------------------------
   const sendInfo = (info) => {
     //crear arr
     const newArr = [];
@@ -56,6 +90,7 @@ export default function ResultOfList() {
       alert("Error! Already exist");
     }
   };
+
   return (
     <>
       <section id="Griferias" className="container">
