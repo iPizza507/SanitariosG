@@ -31,6 +31,7 @@ function App() {
     let a = URLS.filter((e) => url.includes(e));
     if (a === "") {
       setShow(false);
+      window.location.reload();
     }
   }, [url]);
   return (

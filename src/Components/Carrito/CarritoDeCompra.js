@@ -59,6 +59,7 @@ export default function CarritoDeCompra() {
       history("/buy");
     } else {
       alert("Please, register to buy..");
+      history("/registrarse");
     }
   };
 

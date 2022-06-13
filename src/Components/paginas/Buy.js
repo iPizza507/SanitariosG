@@ -27,11 +27,12 @@ export default function Buy() {
     window.location.reload();
   };
   //eliminar todos
+  /**
   const eliminateAll = () => {
     localStorage.clear();
     alert("Delete All");
     window.location.reload();
-  };
+  }; */
   //añadir cantidad
   const addMore = (x) => {
     let nuevaCant = prompt("¿Cantidad?");

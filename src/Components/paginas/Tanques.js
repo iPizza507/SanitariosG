@@ -5,7 +5,7 @@ import CartaTanquesDeAgua from "./TanquesDeAgua/CartaTanquesDeAgua";
 export default function Tanques() {
   return (
     <>
-      <section id="Tanques" className="container">
+      <section id="Tanques" className="container m-0">
         <div className="col row m-4">
           <CartaTanquesDeAgua></CartaTanquesDeAgua>
         </div>

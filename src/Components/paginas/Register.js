@@ -1,4 +1,4 @@
-import { useNavigate, Navigate } from "react-router-dom";
+import { useNavigate, Navigate, Link } from "react-router-dom";
 export default function Register() {
   //para redirigir
   const history = useNavigate();
@@ -67,6 +67,12 @@ export default function Register() {
               className="form-control"
               id="exampleInputPassword2"
             />
+            <div id="emailHelp" className="form-text">
+              Si ya tienes una cuenta..
+              <Link className="mx-2" to="/ingresar">
+                LogIn!
+              </Link>
+            </div>
           </div>
           <button
             type="submit"

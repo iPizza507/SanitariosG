@@ -33,10 +33,10 @@ export default function Filtros() {
 
   return (
     <>
-      <div className="col-2 m-2">
+      <div className="col-2 px-5 pt-3">
         <h1>Filtros</h1>
         <form action="/resultados">
-          <div className="form-group col-md-4">
+          <div className="form-group col-6">
             <label>Marca</label>
             <select id="marca" className="form-control">
               <option value="" disabled selected>
@@ -54,7 +54,7 @@ export default function Filtros() {
               <option value="Affinity">Affinity</option>
             </select>
           </div>
-          <div className="form-group col-md-4">
+          <div className="form-group col-6">
             <label>Tipo</label>
             <select id="tipo" className="form-control">
               <option value="" disabled selected>
