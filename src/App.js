@@ -21,46 +21,26 @@ import LogIn from "./Components/paginas/LogIn";
 import CarritoDeCompra from "./Components/Carrito/CarritoDeCompra";
 import ResultOfList from "./Components/Buscador/ResultOfList";
 import Buy from "./Components/paginas/Buy";
-import Filtros from "./Components/Buscador/Filtros";
 
 function App() {
-  const [show, setShow] = useState(true);
-  let url = window.location.href;
-  useEffect(() => {
-    const URLS = ["home", "ingresar", "registrarse"];
-    let a = URLS.filter((e) => url.includes(e));
-    if (a === "") {
-      setShow(false);
-      window.location.reload();
-    }
-  }, [url]);
   return (
     <>
       <BrowserRouter>
         <NavBar2 />
-        <div className="d-flex">
-          {show === true ? <Filtros></Filtros> : <>No</>}
-
-          <Routes>
-            <Route exact path="/" element={<Home />}></Route>
-            <Route path="/griferia" element={<Griferia />}></Route>
-            <Route path="/bombasDeAgua" element={<BombasDeAgua />}></Route>
-            <Route path="/sanitarios" element={<Sanitarios />}></Route>
-            <Route path="/piletas" element={<Piletas />}></Route>
-            <Route path="/tanques" element={<Tanques />}></Route>
-            <Route path="/termotanques" element={<Termotanques />}></Route>
-            <Route path="/ingresar" element={<LogIn />}></Route>
-            <Route path="/registrarse" element={<Register />}></Route>
-            <Route path="/resultados" element={<ResultOfList />}></Route>
-            <Route path="/buy" element={<Buy />}></Route>
-          </Routes>
-
-          <div id="ListaOfCar" className="col-3">
-            <CarritoDeCompra />
-          </div>
-        </div>
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route path="/griferia" element={<Griferia />}></Route>
+          <Route path="/bombasDeAgua" element={<BombasDeAgua />}></Route>
+          <Route path="/sanitarios" element={<Sanitarios />}></Route>
+          <Route path="/piletas" element={<Piletas />}></Route>
+          <Route path="/tanques" element={<Tanques />}></Route>
+          <Route path="/termotanques" element={<Termotanques />}></Route>
+          <Route path="/ingresar" element={<LogIn />}></Route>
+          <Route path="/registrarse" element={<Register />}></Route>
+          <Route path="/resultados" element={<ResultOfList />}></Route>
+          <Route path="/buy" element={<Buy />}></Route>
+        </Routes>
       </BrowserRouter>
-
       <Footer />
     </>
   );

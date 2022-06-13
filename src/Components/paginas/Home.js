@@ -3,7 +3,7 @@ import ImagenesFrontales from "../../assets/ImagenesFrontales";
 
 export default function Home() {
   return (
-    <div className="col-12">
+    <>
       <div
         id="carouselExampleControls"
         className="carousel slide"
@@ -13,14 +13,14 @@ export default function Home() {
           <div className="carousel-item active">
             <img
               className="d-block w-100"
-              src={ImagenesFrontales.ImagenFrontal1}
+              src={ImagenesFrontales.ImagenFrontal2}
               alt="First slide"
             />
           </div>
           <div className="carousel-item">
             <img
               className="d-block w-100"
-              src={ImagenesFrontales.ImagenFrontal2}
+              src={ImagenesFrontales.ImagenFrontal1}
               alt="Second slide"
             />
           </div>
@@ -62,6 +62,6 @@ export default function Home() {
         <p>Si no encontras ninguna griferia.. Te lo enviamos!!</p>
         <p>Griferia cerca de tu casa</p>
       </div>
-    </div>
+    </>
   );
 }

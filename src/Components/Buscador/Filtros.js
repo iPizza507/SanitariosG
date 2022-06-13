@@ -116,7 +116,7 @@ export default function Filtros() {
               value="Submit"
               onClick={sendFiltros}
             >
-              Search
+              Buscar..
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
