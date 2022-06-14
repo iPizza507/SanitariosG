@@ -77,5 +77,8 @@ body {
   .changeSection{
     display: flex;
     flex-direction: column;
-  }
+  } 
+  #ListaOfCar{
+    padding: 0px 20px;
+  } 
 }
