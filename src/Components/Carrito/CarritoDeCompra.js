@@ -64,7 +64,7 @@ export default function CarritoDeCompra() {
   };
 
   return (
-    <div className="cart-border">
+    <div className="cart-border ">
       {total !== 0 ? (
         <>
           <div className="d-flex justify-content-between align-items-center">
@@ -74,7 +74,7 @@ export default function CarritoDeCompra() {
             <p>Agregar cant</p>
             <p>eliminar item</p>
           </div>
-          <div id="ListOfCar">
+          <div>
             {estad.map((e) => (
               <div
                 className="d-flex justify-content-between align-items-center itemListOfCar"

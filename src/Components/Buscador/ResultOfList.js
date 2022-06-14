@@ -96,10 +96,10 @@ export default function ResultOfList() {
 
   return (
     <>
-      <div className="d-flex">
+      <div className="d-flex changeSection">
         <Filtros></Filtros>
-        <section id="Griferias" className="container">
-          <div className="col row m-4">
+        <section id="Results" className="container">
+          <div className="col row m-4 col-md-12">
             {newAr.length > 0 ? (
               newAr.map((e) => {
                 return (
@@ -162,7 +162,7 @@ export default function ResultOfList() {
             )}
           </div>
         </section>
-        <div id="ListaOfCar" className="col-3">
+        <div id="ListaOfCar" className="col-12 col-lg-3 col-xl-3">
           <CarritoDeCompra />
         </div>
       </div>

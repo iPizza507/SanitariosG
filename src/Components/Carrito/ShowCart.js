@@ -17,7 +17,7 @@ export const ShowCart = () => {
   let url = window.location.href;
   const URLS = ["", "ingresar", "registrarse"];
   let a = URLS.map((e) => url.includes(e));
-  console.log(a);
+
   if (a === "") {
     setShow(false);
   }
