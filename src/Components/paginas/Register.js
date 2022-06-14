@@ -70,7 +70,7 @@ export default function Register() {
             <div id="emailHelp" className="form-text">
               Si ya tienes una cuenta..
               <Link className="mx-2" to="/ingresar">
-                Logueate!
+                Login!
               </Link>
             </div>
           </div>

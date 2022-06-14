@@ -68,6 +68,9 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .formLogin, .formRegister{
+    margin: 100px;
+  }
   #ListaOfCar{
     padding: 0px 20px;
   } 
@@ -78,6 +81,9 @@ body {
     display: flex;
     flex-direction: column;
   } 
+  .formLogin, .formRegister{
+    margin: 50px;
+  }
   #ListaOfCar{
     padding: 0px 20px;
   } 

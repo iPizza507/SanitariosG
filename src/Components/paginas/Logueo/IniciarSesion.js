@@ -8,7 +8,7 @@ export const IniciarSesion = () => {
   return (
     <>
       {person && <Navigate to="/" />}
-      <div className="col container">
+      <div className="container col m-4 col-md-12">
         <form className="formLogin">
           <div className="mb-3">
             <label className="form-label">Email</label>
@@ -31,7 +31,7 @@ export const IniciarSesion = () => {
             />
           </div>
           <button type="submit" className="btn btn-form-login">
-            Loguear!
+            Login!
           </button>
         </form>
       </div>
