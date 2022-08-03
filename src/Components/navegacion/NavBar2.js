@@ -42,7 +42,7 @@ export const NavBar2 = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-color">
+      <nav className="navbar navbar-expand-md navbar-light bg-color">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -134,7 +134,10 @@ export const NavBar2 = () => {
               </button>
             </form>
 
-            <ul className="navbar-nav  mb-lg-0">
+            <ul
+              className="navbar-nav  mb-lg-0"
+              id="navbarSupportedContent-list"
+            >
               <li className="nav-item">
                 <Link className="itemHover" to="/registrarse">
                   Mi cuenta

@@ -1,6 +1,10 @@
 body {
   margin: 0;
 }
+svg{
+  width: 25px;
+  height: 25px;
+}
 .card {
   width: 18rem;
 }
@@ -83,6 +87,12 @@ body {
 #marca, #tipo{
   padding: 3px;
 }
+#filters{
+margin: 0 20px;
+  padding: 0;
+}
+  
+
 
 @media all and (min-width:768px) and (max-width: 1200px){ 
   .changeSection{
@@ -104,9 +114,13 @@ body {
   #search{
     height: 30px;
   }
+  svg{
+    width: 18px;
+    height: 18px;
+  }
 }
 
-@media all and (max-width: 599px){
+@media all and (max-width: 767px){
   .changeSection{
     display: flex;
     flex-direction: column;
@@ -116,5 +130,23 @@ body {
   }
   #ListaOfCar{
     padding: 0px 20px;
-  } 
+  }
+  #filters{
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+  }
+  .nav-item{
+    font-size: 200px;
+    padding: 0;
+  }
+  #navbarSupportedContent-list,  #navbarSupportedContent form{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  svg{
+    width: 18px;
+    height: 18px;
+  }
 }

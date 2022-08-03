@@ -33,7 +33,7 @@ export default function Filtros() {
 
   return (
     <>
-      <div className="col-12 mx-2 pt-3 col-lg-2 col-xl-2">
+      <div className="col-2 pt-3" id="filters">
         <h1>Filtros</h1>
         <form action="/resultados">
           <div className="form-group">
