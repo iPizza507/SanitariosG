@@ -64,7 +64,7 @@ export default function CarritoDeCompra() {
   };
 
   return (
-    <div className="cart-border ">
+    <div className="cart-border" id="ListaOfCar">
       {total !== 0 ? (
         <>
           <div className="d-flex justify-content-between align-items-center">

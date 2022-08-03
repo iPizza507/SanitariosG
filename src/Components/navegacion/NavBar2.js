@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 //components
 import LogOut from "../paginas/Logueo/LogOut";
 import ShowCart from "../Carrito/ShowCart";
+import CarritoDeCompra from "../Carrito/CarritoDeCompra";
 
 export const NavBar2 = () => {
   const history = useNavigate();
@@ -159,6 +160,9 @@ export const NavBar2 = () => {
           </div>
         </div>
       </nav>
+      <div className="position-Abs">
+        <CarritoDeCompra />
+      </div>
     </>
   );
 };
