@@ -1,5 +1,4 @@
 //Dependency
-import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //Styles
@@ -18,7 +17,6 @@ import Tanques from "./Components/paginas/Tanques";
 import Termotanques from "./Components/paginas/Termotanques";
 import Register from "./Components/paginas/Register";
 import LogIn from "./Components/paginas/LogIn";
-import CarritoDeCompra from "./Components/Carrito/CarritoDeCompra";
 import ResultOfList from "./Components/Buscador/ResultOfList";
 import Buy from "./Components/paginas/Buy";
 

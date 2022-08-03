@@ -19,6 +19,8 @@ body {
   margin: 0;
   padding: 10px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 .itemHover:hover {
   border-radius: 10%;
@@ -63,7 +65,7 @@ body {
   padding: 10px;
 }
 
-@media all and (min-width:600px) and (max-width: 1023px){ 
+@media all and (min-width:600px) and (max-width: 1024px){ 
   .changeSection{
     display: flex;
     flex-direction: column;
@@ -73,7 +75,21 @@ body {
   }
   #ListaOfCar{
     padding: 0px 20px;
-  } 
+  }
+  #navbarSupportedContent li a{
+    font-size: 15px;
+  }
+  #navbarSupportedContent form input{
+    width: 100px;
+  }
+  .itemHover {
+    font-size: 15px;
+    padding: 0px 5px;
+    
+  }
+  #search{
+    height: 30px;
+  }
 }
 
 @media all and (max-width: 599px){
